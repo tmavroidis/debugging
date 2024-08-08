@@ -1,5 +1,5 @@
 # debugging
-Neat trick I just found that you can do with the debugger, you can set it to wide screen mode 27 * 132 (STRDBDWIDE).
+Neat trick I just found that you can do with the debugger, you can set it to wide screen mode 27 * 132 (STRDBGWIDE).
 
 
 Then change it back (ENDDBGWIDE). 
@@ -11,7 +11,7 @@ Or you can just run the addenvvar from the command line.
 Useful when the source lines are longer than 80 bytes long, saves you from scrolling over.
 
 
-Compile as CLLE to use.
+Compile as STRDBGWIDE in CLLE to use.
 
              /*  Set debugger to 27 * 132 mode                               */
              /* PGM STRDBGWIDE  */            
@@ -26,8 +26,9 @@ Compile as CLLE to use.
                           Value('ALLOW_WIDE_SCREEN') Level(*Job) Replace(*Yes)
                           
 
-             endpgm                  
-             
+             endpgm        
+             ---------------------------------------------------------------
+             Compile as ENDDBGWIDE in CLLE to use.
              /*  Set debugger to 24 * 80 mode  */
              /* PGM ENDDBGWIDE  *.
              /* NTM Consulting Incorporated, Markham, Ontario                */
